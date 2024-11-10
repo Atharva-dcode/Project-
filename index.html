@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Information with Diseases, Solutions, and Feedback</title>
+    <title>Pet Information with Diseases, Solutions, Feedback, Contact Us, and Project Details</title>
     <script src="https://kit.fontawesome.com/944d189c85.js" crossorigin="anonymous"></script>
     <style>
         /* Reset styles */
@@ -18,10 +18,18 @@
             scroll-behavior: smooth;
         }
 
+        /* Body styling */
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right,);
-            background-color: #ababab;
+            background-image: url('mountain-magic-hour.jpg');
+            background-size: cover;
+
+            background-repeat: no-repeat;
+
+
+
+            font-family: Arial,
+                sans-serif;
+            background-color: #d0d0d0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -30,110 +38,50 @@
             flex-direction: column;
         }
 
-        /* Navigation Bar styling */
-        nav {
+        /* Navbar Styling */
+        .navbar {
             width: 100%;
-            background-color: #000000;
-            padding: 15px 0;
+            background-color: #333;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar ul {
             display: flex;
             justify-content: center;
-            position: fixed;
-            top: 0;
-            z-index: 10;
-        }
-
-       
-
-        .Bi {
-
-            text-align: center;
-            width: 260px;
-            color: #fff;
-            border-radius: 9px;
-            background-color: #000000;
-            font-size: 2rem;
-           
-        }
-
-        .project_detail {
-            font-size: 2rem;
-            color: #000000;
-        }
-
-        .Row {
-            border-radius: 10px;
-            text-align: center;
-            background-color: #000000;
-            color: #f4f4f4;
-        }
-
-        .projects_skills {
-            font-size: 2rem;
-            color: #000000;
-        }
-
-        .Api {
-            font-size: 1.3rem;
-            border-radius: 4px;
-            color: #fff;
-            background-color: #000000;
-        }
-
-        .api {
-            margin-left: 10px;
-            text-decoration: none;
-            font-size: 18px;
-            color: #000000;
-        }
-        #project{
-            text-align: left;
-            margin-left: 0;
-            width: 100%;
-            border-radius: 10px;
-           font-size: 3rem;
-            border-left: 4px ;
-            animation: slideIn 0.5s ease;
-            margin-top: 400px;
-            margin-bottom: 200px;
-
-        }
-
-
-
-
-        /* Navigation links styling */
-        nav ul {
-            display: flex;
             list-style: none;
         }
 
-        nav ul li {
-            margin: 0 15px;
+        .navbar ul li {
+            margin: 0 20px;
         }
 
-        nav ul li a {
-            color: #fff;
+        .navbar ul li a {
+            color: white;
             text-decoration: none;
             font-size: 1.1em;
-            padding: 8px 16px;
-            border-radius: 8px;
-            transition: background 0.3s ease;
+            font-weight: 600;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
         }
 
-        nav ul li a:hover {
-            background-color: #7e7b7b;
+        .navbar ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
         }
 
         /* Main container styling */
         .container {
             width: 90%;
             max-width: 600px;
-            background: #fff;
+            background: #ffffff;
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
             animation: fadeIn 0.8s ease-in-out;
-            margin-top: 80px;
+            margin-top: 20px;
         }
 
         /* Header styling */
@@ -145,6 +93,13 @@
             font-weight: 700;
         }
 
+        p {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Select dropdown styling */
         #pet-select,
         #disease-select {
             width: 100%;
@@ -163,6 +118,7 @@
             border-color: #000000;
         }
 
+        /* Info boxes styling */
         .pet-info,
         .solution-info {
             margin-bottom: 20px;
@@ -173,94 +129,67 @@
             animation: slideIn 0.5s ease;
         }
 
+        /* Section header styling */
         .solution-info h3 {
-            color: #4A90E2;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .feedback-form {
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #f0f4f8;
-            margin-top: 20px;
-            border-left: 4px solid #000000;
-            animation: slideIn 0.5s ease;
-        }
-
-        .contact-form {
-
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #f0f4f8;
-            border-left: 4px solid #000000;
-            animation: slideIn 0.5s ease;
-            margin-top: 250px;
-            margin-bottom: 200px;
-        }
-
-
-         .were {
-            
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 200px;
-            margin-bottom: 50px;
-        
-           
-        }
-        .project-details {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-        .project-details h2 {
-            margin-top: 0;
-            color: #333;
-        }
-        .project-details p {
-            margin: 10px 0;
-        }
-        .project-details .label {
-            font-weight: bold;
-            color: #555;
-        }
-
-
-
-        /* Partition Line */
-        .partition {
-            margin: 30px 0;
-            border-top: 2px solid #000000;
-        }
-
-        .contact-form h3 {
             color: #000000;
             font-weight: 700;
             margin-bottom: 10px;
         }
 
-        .contact-form input,
-        .contact-form textarea {
+        /* Feedback form styling */
+        .feedback-form {
+
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f0f4f8;
+            border-left: 4px solid #000000;
+            animation: slideIn 0.5s ease;
+        }
+
+        .contact-form {
+            margin-top: 130px;
+            margin-bottom: 130px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f0f4f8;
+            border-left: 4px solid #000000;
+            animation: slideIn 0.5s ease;
+        }
+
+        .project-details {
+            margin-top: 130px;
+            margin-bottom: 200px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f0f4f8;
+            border-left: 4px solid #000000;
+            animation: slideIn 0.5s ease;
+        }
+
+        /* Textarea styling */
+        .feedback-form textarea,
+        .contact-form textarea,
+        .contact-form input[type="text"],
+        .contact-form input[type="email"] {
             width: 100%;
             padding: 12px;
-            margin-bottom: 15px;
             border-radius: 8px;
             border: 2px solid #ddd;
+            resize: vertical;
+            margin-bottom: 15px;
             transition: border 0.3s ease;
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
+        .feedback-form textarea:focus,
+        .contact-form textarea:focus,
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus {
             border-color: #000000;
             outline: none;
         }
 
+        /* Button styling */
+        .feedback-form button,
         .contact-form button {
             background-color: #000000;
             color: #fff;
@@ -272,18 +201,33 @@
             transition: background 0.3s ease;
         }
 
+        .btn {
+            font-size: 20px;
+            color: #fff;
+            display: inline-block;
+            background: rgb(0, 0, 0);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+
+        }
+
+        .Okk p {
+
+
+            color: #000000;
+        }
+
+        .feedback-form button:hover,
         .contact-form button:hover {
             background-color: #000000;
         }
 
-        .Okk {
-            margin-bottom: 100px;
-            justify-content: left;
-
-        }
-
-        #feedback-message {
-            color: #27ae60;
+        /* Success message styling */
+        #feedback-message,
+        #contact-message {
+            color: #000000;
             font-weight: bold;
             margin-top: 15px;
             font-size: 1em;
@@ -316,20 +260,18 @@
 </head>
 
 <body>
-
-    <!-- Navigation Bar -->
-    <nav>
+    <!-- Navbar -->
+    <div class="navbar">
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#project">About</a></li>
+            <li><a href="#about">Project Details</a></li>
             <li><a href="#contact">Contact Us</a></li>
         </ul>
-    </nav>
-    <h3 id="home"></h3>
-    <!-- Main Content Container -->
+    </div>
+
+    <!-- Main content -->
     <div class="container" id="home">
         <h1>Pet Information Page</h1>
-
         <p>Select a pet to learn more about it:</p>
 
         <!-- Pet Selection Dropdown -->
@@ -364,79 +306,190 @@
             </form>
             <div id="feedback-message"></div>
         </div>
-
-        <!-- Partition Line -->
-        <div class="partition"></div>
     </div>
-    <!-- Contact Us Section -->
 
-
-
-
-
-
-   <form class="were">
-<section class="project-details">
-
-    <h2>Project Name: Animal Welfare Web Application</h2>
     <br>
+    <br>
+    <div class="contact-form" id="contact">
+        <h3>Contact Us</h3>
+        <form id="contact-form" onsubmit="submitContact(event)">
+            <label for="contact-name">Your Name:</label>
+            <input type="text" id="contact-name" required>
 
-    <p><span class="label">Project Manager:</span> Atharva Jaiswal</p>
-    <p><span class="label">Start Date:</span> August 30, 2024</p>
+            <label for="contact-email">Your Email:</label>
+            <input type="email" id="contact-email" required>
 
-    <p><span class="label">Status:</span> In Progress</p>
-    <p><span class="label">Description:</span> We provide information about pets, such as dogs, cats, 
-        fish, and others, as well as health, diet, and daily protein to pet owners. We also remove user-provided questions and answer any issues they may have. 
-        Our initiative is called Animal Welfare. 
-    </p>
-   
-</form>
+            <label for="contact-message">Your Message:</label>
+            <textarea id="contact-message" rows="4" required></textarea>
 
-</section>
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="contact-message"></div>
+        <br>
+        <div class="Okk">
 
-
-
-
-
-    <section>
-
-        <div class="contact-form" id="contact">
-            <h4 id="contact"></h4>
-
-            <h3>Contact Us</h3>
-
-            <form id="contact-form=">
-                <label for="name">Name:</label>
-                <input type="text" id="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" rows="4" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-            <div id="contact-message"></div>
+            <p><i class="fa-regular fa-envelope"></i>atharvajaiswal00007@gmail.com</p>
             <br>
-            <br>
-            <br>
-            <div class="Okk">
-
-                <p><i class="fa-regular fa-envelope"></i>atharvajaiswal00007@gmail.com</p>
-                <br>
-                <p><i class="fa-solid fa-phone"></i>9767994247</p>
-            </div>
-
-
+            <p><i class="fa-solid fa-phone"></i>9767994247</p>
         </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3 id="about"></h3>
+    <div class="project-details" id="project-details">
+        <h3>Project Details</h3>
+        <p><span class="label"><b>Description:</b></span> We provide information about pets, such as dogs, cats,
+            fish, and others, as well as health, diet, and daily protein to pet owners. We also remove user-provided
+            questions and answer any issues they may have.
+            Our initiative is called Animal Welfare.
+        </p>
+        <br>
+        <a href="CEP Report.pdf" download class="btn">Project Report Link </a>
+        <br>
+        <br>
+        <ul>
+            <li>Information about common pet diseases</li>
+            <li>Suggestions for preventive measures and treatments</li>
+            <li>A feedback form for user reviews and suggestions</li>
+            <li>A contact form for reaching out with inquiries</li>
+        </ul>
+    </div>
 
 
-    </section>
+
+    <br>
+    <br>
 
 
     <script>
-        // JavaScript functions as before...
+        const petData = {
+            dog: {
+                name: "Dog",
+                info: "Dogs are loyal, friendly, and active companions. They require regular exercise, a balanced diet, and lots of love.",
+                diseases: {
+                    "Parvovirus": "Vaccinate puppies to prevent this deadly disease.",
+                    "Distemper": "Vaccination is key to prevention.",
+                    "Kennel Cough": "Keep dogs in clean, ventilated areas and avoid exposure to infected dogs.",
+                    "Fleas": "Use flea treatment regularly and keep living areas clean.",
+                    "Heartworm": "Prevention is easy with monthly medication."
+                }
+            },
+            cat: {
+                name: "Cat",
+                info: "Cats are independent, curious, and make wonderful indoor pets. They are easy to care for and love both playtime and relaxation.",
+                diseases: {
+                    "Feline Leukemia Virus": "Keep cats indoors and vaccinate them to reduce the risk of infection.",
+                    "Feline Immunodeficiency Virus": "There’s no cure, but regular vet checkups can help manage symptoms.",
+                    "Ringworm": "Isolate infected animals and maintain hygiene to prevent spreading.",
+                    "Toxoplasmosis": "Prevent by keeping cats indoors and ensuring proper hygiene when cleaning the litter box.",
+                    "Feline Heartworm": "Prevention is possible with medication, so ensure regular vet visits."
+                }
+            },
+            rabbit: {
+                name: "Rabbit",
+                info: "Rabbits are gentle, quiet, and love to hop around. They make great indoor pets.",
+                diseases: {
+                    "Myxomatosis": "Vaccinate rabbits and keep them indoors to prevent mosquito bites, which spread the virus.",
+                    "Rabbit Hemorrhagic Disease": "Vaccination and quarantine of new rabbits can help prevent this disease.",
+                    "Ear Mites": "Regular grooming and vet checkups help prevent and treat ear mites.",
+                    "Pasteurellosis": "Keep the environment clean and prevent exposure to respiratory infections.",
+                    "Coccidiosis": "Maintain a clean cage and provide fresh water and food to prevent this infection."
+                }
+            },
+            hamster: {
+                name: "Hamster",
+                info: "Hamsters are small, nocturnal rodents that are easy to care for and fun to watch.",
+                diseases: {
+                    "Wet Tail": "Keep the habitat clean and reduce stress to prevent wet tail disease.",
+                    "Respiratory Infections": "Keep hamsters in a dry, warm environment and avoid drafts.",
+                    "Mites": "Regular cleaning of bedding and habitat helps prevent mite infestations.",
+                    "Diarrhea": "Provide proper diet and keep their living environment clean.",
+                    "Tumors": "Keep an eye on their health and visit a vet for any noticeable changes or lumps."
+                }
+            },
+            bird: {
+                name: "Bird",
+                info: "Birds are intelligent, social animals that enjoy interaction and can be trained.",
+                diseases: {
+                    "Psittacosis": "Maintain a clean cage and regular vet visits to prevent this bacterial infection.",
+                    "Aspergillosis": "Provide fresh, clean air and avoid dusty environments to reduce risk.",
+                    "Avian Influenza": "Isolate new birds and monitor for signs to prevent spreading.",
+                    "Chlamydiosis": "Ensure your bird's cage is kept clean and provide regular vet checkups.",
+                    "Beak and Feather Disease": "There’s no cure, but isolation and keeping the cage clean can help."
+                }
+            },
+            fish: {
+                name: "Fish",
+                info: "Fish are peaceful pets that come in many colorful varieties and are relaxing to watch.",
+                diseases: {
+                    "Ich": "Raise water temperature slightly and add medication to treat Ich.",
+                    "Fin Rot": "Keep water clean and avoid overfeeding to prevent bacterial infections.",
+                    "Swim Bladder Disease": "Feed peas and maintain water quality to help with swim bladder issues.",
+                    "Dropsy": "Ensure water quality is optimal and isolate affected fish.",
+                    "Columnaris": "Quarantine infected fish and clean the aquarium regularly to prevent outbreaks."
+                }
+            }
+        };
+
+        function showPetInfo() {
+            const petSelect = document.getElementById('pet-select');
+            const petInfoDiv = document.getElementById('pet-info');
+            const diseaseSelect = document.getElementById('disease-select');
+            const solutionInfoDiv = document.getElementById('solution-info');
+            const selectedPet = petSelect.value;
+
+            petInfoDiv.innerHTML = "";
+            diseaseSelect.innerHTML = '<option value="">--Select a disease--</option>';
+            solutionInfoDiv.innerHTML = "";
+
+            if (petData[selectedPet]) {
+                petInfoDiv.innerHTML = `<h2>${petData[selectedPet].name}</h2><p>${petData[selectedPet].info}</p>`;
+                for (const disease in petData[selectedPet].diseases) {
+                    const option = document.createElement('option');
+                    option.value = disease;
+                    option.textContent = disease;
+                    diseaseSelect.appendChild(option);
+                }
+            }
+        }
+
+        function showSolution() {
+            const petSelect = document.getElementById('pet-select').value;
+            const diseaseSelect = document.getElementById('disease-select').value;
+            const solutionInfoDiv = document.getElementById('solution-info');
+
+            solutionInfoDiv.innerHTML = "";
+
+            if (petData[petSelect] && petData[petSelect].diseases[diseaseSelect]) {
+                solutionInfoDiv.innerHTML = `<h3>Solution for ${diseaseSelect}</h3><p>${petData[petSelect].diseases[diseaseSelect]}</p>`;
+            }
+        }
+
+        function submitFeedback(event) {
+            event.preventDefault();
+            const feedbackText = document.getElementById('feedback-text').value;
+            const feedbackMessage = document.getElementById('feedback-message');
+
+            feedbackMessage.innerText = `Thank you for your feedback: "${feedbackText}"`;
+
+            document.getElementById('feedback-form').reset();
+        }
+
+        function submitContact(event) {
+            event.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const message = document.getElementById('contact-message').value;
+            const contactMessage = document.getElementById('contact-message');
+
+            contactMessage.innerText = `Thank you for reaching out, ${name}. We will get back to you at ${email} soon!`;
+
+            document.getElementById('contact-form').reset();
+        }
     </script>
 </body>
 
